@@ -1,0 +1,2 @@
+# Ignorar a pasta node_modules em todo o projeto
+venv/
