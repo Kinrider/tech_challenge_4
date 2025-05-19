@@ -1,30 +1,17 @@
-# Manipulação de dados
 pandas>=2.2.2
 numpy>=1.26.4
-
-# Visualização
 matplotlib>=3.10.1
 seaborn>=0.13.2
-
-# Machine Learning e Deep Learning
 scikit-learn>=1.3.2
 xgboost>=3.0.1
 tensorflow>=2.13.0
-
-# Séries temporais
 prophet>=1.1.6
 statsforecast>=1.6.0
 statsmodels>=0.14.2
-
-# API e utilidades
 requests>=2.32.3
 joblib>=1.5.0
 ipeadatapy>=0.2.9
-
-# Web app
 streamlit>=1.45.1
-
-# Jupyter Notebook
 notebook>=7.1.3
 jupyterlab>=4.1.8
 ipykernel>=6.29.4
