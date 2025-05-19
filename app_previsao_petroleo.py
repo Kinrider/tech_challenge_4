@@ -79,7 +79,7 @@ tab1, tab2 , tab3 = st.tabs(["Insights e análises", "Modelagem", "Previsão" ])
 
 # --- Aba 1: Visualização + Eventos ---
 with tab1:
-    st.title("📈 Visualização Histórica do Preço do Petróleo Brent")
+    st.title("📈 Insights e análises")
 
     st.subheader("Preço Histórico do Petróleo Brent (USD)")
     st.line_chart(df_dados.set_index("Data")["Valor"])
@@ -248,7 +248,7 @@ with tab3:
     st.markdown(texto1)   
     
     ultima_data = df_dados["Data"].max()
-    max_data_permitida = ultima_data + timedelta(days=30)
+    max_data_permitida = ultima_data + timedelta(days=10)
 
     data_input = st.date_input(
         "Escolha a data para previsão:",
