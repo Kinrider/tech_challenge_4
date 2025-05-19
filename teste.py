@@ -1,20 +1,18 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pickle
+import joblib
 import requests
 from datetime import datetime
-import os
 
 # ========== Baixar modelo do GitHub ==========
 @st.cache_resource
 def carregar_modelo():
-    url = "https://github.com/Kinrider/tech_challenge_4/blob/0c9497bc664bee08eb908f2116b95947053e1e8b/Modelo/xgb_petroleo_model.pkl"
+    url = "https://raw.githubusercontent.com/usuario/repositorio/main/modelo_xgb.joblib"  # Substitua com o seu link raw
     response = requests.get(url)
-    with open("modelo_xgb.pkl", "wb") as f:
+    with open("modelo_xgb.joblib", "wb") as f:
         f.write(response.content)
-    with open("modelo_xgb.pkl", "rb") as f:
-        modelo = pickle.load(f)
+    modelo = joblib.load("modelo_xgb.joblib")
     return modelo
 
 modelo = carregar_modelo()
