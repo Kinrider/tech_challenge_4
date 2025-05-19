@@ -8,7 +8,7 @@ from datetime import datetime
 # ========== Baixar modelo do GitHub ==========
 @st.cache_resource
 def carregar_modelo():
-    url = "https://raw.githubusercontent.com/usuario/repositorio/main/modelo_xgb.joblib"  # Substitua com o seu link raw
+    url = "https://github.com/Kinrider/tech_challenge_4/raw/refs/heads/main/Modelo/xgb_petroleo_model.pkl" 
     response = requests.get(url)
     with open("modelo_xgb.joblib", "wb") as f:
         f.write(response.content)
